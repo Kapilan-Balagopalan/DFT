@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.xst" -ofn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.syr" 
+xst -intstyle ise -ifn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.xst" -ofn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.syr" 
+xst -intstyle ise -ifn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.xst" -ofn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.syr" 
+xst -intstyle ise -ifn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.xst" -ofn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.syr" 
+xst -intstyle ise -ifn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.xst" -ofn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.syr" 
+xst -intstyle ise -ifn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.xst" -ofn "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.syr" 
+vhdtdtfi -lib work {E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Odd_Up_Down_Counter.v} -lang verilog -prj DFT -o Even_Up_Down_Counter.spl -module Even_Up_Down_Counter -template C:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex6 Even_Up_Down_Counter.spl {E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Even_Up_Down_Counter.sym} 

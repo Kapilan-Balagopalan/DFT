@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/EvenCounter_isim_beh.exe" -prj "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/EvenCounter_beh.prj" "EvenCounter" "work.glbl" 

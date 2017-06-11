@@ -1,0 +1,84 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.5
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Final.vf
+// /___/   /\     Timestamp : 06/11/2017 16:10:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Final.vf" -w "E:/merged_partition_content/Semi 7/Digital IC Design/Simulations/DFT/Final.sch"
+//Design Name: Final
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Final(XLXN_11, 
+             XLXN_21, 
+             XLXN_1, 
+             XLXN_2, 
+             XLXN_3);
+
+    input XLXN_11;
+    input XLXN_21;
+   output XLXN_1;
+   output XLXN_2;
+   output XLXN_3;
+   
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_19;
+   wire XLXN_1_DUMMY;
+   wire XLXN_2_DUMMY;
+   wire XLXN_3_DUMMY;
+   
+   assign XLXN_1 = XLXN_1_DUMMY;
+   assign XLXN_2 = XLXN_2_DUMMY;
+   assign XLXN_3 = XLXN_3_DUMMY;
+   Tetsenabled_DFF  XLXI_1 (.clk(XLXN_21), 
+                           .d(XLXN_5), 
+                           .q(XLXN_1_DUMMY), 
+                           .q1());
+   Tetsenabled_DFF  XLXI_2 (.clk(XLXN_21), 
+                           .d(XLXN_19), 
+                           .q(XLXN_2_DUMMY), 
+                           .q1());
+   Tetsenabled_DFF  XLXI_3 (.clk(XLXN_21), 
+                           .d(XLXN_3_DUMMY), 
+                           .q(XLXN_3_DUMMY), 
+                           .q1());
+   AND3B1  XLXI_4 (.I0(XLXN_2_DUMMY), 
+                  .I1(XLXN_1_DUMMY), 
+                  .I2(XLXN_11), 
+                  .O(XLXN_6));
+   AND3B1  XLXI_5 (.I0(XLXN_1_DUMMY), 
+                  .I1(XLXN_2_DUMMY), 
+                  .I2(XLXN_11), 
+                  .O(XLXN_10));
+   AND3B1  XLXI_6 (.I0(XLXN_11), 
+                  .I1(XLXN_2_DUMMY), 
+                  .I2(XLXN_1_DUMMY), 
+                  .O(XLXN_8));
+   AND3B3  XLXI_7 (.I0(XLXN_11), 
+                  .I1(XLXN_1_DUMMY), 
+                  .I2(XLXN_2_DUMMY), 
+                  .O(XLXN_9));
+   OR4  XLXI_8 (.I0(XLXN_9), 
+               .I1(XLXN_8), 
+               .I2(XLXN_10), 
+               .I3(XLXN_6), 
+               .O(XLXN_5));
+   AND2B1  XLXI_9 (.I0(XLXN_2_DUMMY), 
+                  .I1(XLXN_3_DUMMY), 
+                  .O(XLXN_19));
+endmodule

@@ -1,0 +1,5 @@
+verilog isim_temp "D_Flip_Flop.v"
+verilog isim_temp "mealy1011.v"
+verilog isim_temp "Final.vf"
+verilog isim_temp "did.v"
+verilog isim_temp "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

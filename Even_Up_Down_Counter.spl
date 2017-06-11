@@ -1,0 +1,13 @@
+[Inputs]
+x
+clk
+SE
+SD
+[Outputs]
+p1
+p2
+p3
+[BiDir]
+[ATTRIBUTES]
+VeriModel Even_Up_Down_Counter
+

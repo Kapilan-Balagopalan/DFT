@@ -1,0 +1,387 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: Odd_Up_Down_Counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Odd_Up_Down_Counter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Odd_Up_Down_Counter"
+Output Format                      : NGC
+Target Device                      : xc6vcx75t-2-ff484
+
+---- Source Options
+Top Module Name                    : Odd_Up_Down_Counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\D_Flip_Flop.v" into library work
+Parsing module <D_Flip_Flop>.
+Analyzing Verilog file "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\mealy1011.v" into library work
+Parsing module <Tetsenabled_DFF>.
+Analyzing Verilog file "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" into library work
+Parsing module <Odd_Up_Down_Counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Odd_Up_Down_Counter>.
+
+Elaborating module <Tetsenabled_DFF>.
+
+Elaborating module <D_Flip_Flop>.
+WARNING:HDLCompiler:1127 - "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" Line 62: Assignment to q01 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" Line 63: Assignment to q02 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" Line 64: Assignment to q03 ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Odd_Up_Down_Counter>.
+    Related source file is "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v".
+INFO:Xst:3210 - "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" line 62: Output port <q1> of the instance <dff1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" line 63: Output port <q1> of the instance <dff2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\Odd_Up_Down_Counter.v" line 64: Output port <q1> of the instance <dff3> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Odd_Up_Down_Counter> synthesized.
+
+Synthesizing Unit <Tetsenabled_DFF>.
+    Related source file is "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\mealy1011.v".
+    Summary:
+	no macro.
+Unit <Tetsenabled_DFF> synthesized.
+
+Synthesizing Unit <D_Flip_Flop>.
+    Related source file is "E:\merged_partition_content\Semi 7\Digital IC Design\Simulations\DFT\D_Flip_Flop.v".
+    Found 1-bit register for signal <q1>.
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <D_Flip_Flop> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ 1-bit register                                        : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <dff3/dd/q> has a constant value of 0 in block <Odd_Up_Down_Counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dff1/dd/q1> of sequential type is unconnected in block <Odd_Up_Down_Counter>.
+WARNING:Xst:2677 - Node <dff2/dd/q1> of sequential type is unconnected in block <Odd_Up_Down_Counter>.
+WARNING:Xst:2677 - Node <dff3/dd/q1> of sequential type is unconnected in block <Odd_Up_Down_Counter>.
+
+Optimizing unit <Odd_Up_Down_Counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Odd_Up_Down_Counter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Odd_Up_Down_Counter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3
+#      GND                         : 1
+#      INV                         : 1
+#      LUT3                        : 1
+# FlipFlops/Latches                : 2
+#      FD                          : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 1
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx75tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               2  out of  93120     0%  
+ Number of Slice LUTs:                    2  out of  46560     0%  
+    Number used as Logic:                 2  out of  46560     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      4
+   Number with an unused Flip Flop:       2  out of      4    50%  
+   Number with an unused LUT:             2  out of      4    50%  
+   Number of fully used LUT-FF pairs:     0  out of      4     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    240     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of    104     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 1.086ns (Maximum Frequency: 920.641MHz)
+   Minimum input arrival time before clock: 0.576ns
+   Maximum output required time after clock: 0.671ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.086ns (frequency: 920.641MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.086ns (Levels of Logic = 1)
+  Source:            dff2/dd/q (FF)
+  Destination:       dff2/dd/q (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: dff2/dd/q to dff2/dd/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.317   0.351  dff2/dd/q (dff2/dd/q)
+     INV:I->O              1   0.079   0.339  d21_INV_0 (d2)
+     FD:D                     -0.002          dff2/dd/q
+    ----------------------------------------
+    Total                      1.086ns (0.396ns logic, 0.690ns route)
+                                       (36.5% logic, 63.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.576ns (Levels of Logic = 2)
+  Source:            x (PAD)
+  Destination:       dff1/dd/q (FF)
+  Destination Clock: clk rising
+
+  Data Path: x to dff1/dd/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.003   0.512  x_IBUF (x_IBUF)
+     LUT3:I0->O            1   0.061   0.000  d121 (d1)
+     FD:D                     -0.002          dff1/dd/q
+    ----------------------------------------
+    Total                      0.576ns (0.064ns logic, 0.512ns route)
+                                       (11.1% logic, 88.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.671ns (Levels of Logic = 1)
+  Source:            dff2/dd/q (FF)
+  Destination:       p2 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dff2/dd/q to p2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.317   0.351  dff2/dd/q (dff2/dd/q)
+     OBUF:I->O                 0.003          p2_OBUF (p2)
+    ----------------------------------------
+    Total                      0.671ns (0.320ns logic, 0.351ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.086|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.73 secs
+ 
+--> 
+
+Total memory usage is 308068 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
